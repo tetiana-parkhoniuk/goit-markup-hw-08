@@ -1,0 +1,19 @@
+.logo {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: 93px;
+
+  font-family: var(--secondary-font);
+  @include font(26px, 700, 1.192);
+  text-decoration: none;
+
+  color: var(--dark-logo-text-color);
+
+  &__accent {
+    color: var(--accent-color);
+  }
+
+  &__dark-theme {
+    color: var(--light-theme-color);
+  }
+}

@@ -1,0 +1,17 @@
+.btn {
+  @extend %align;
+  @include shape(200px, 50px);
+  margin: auto;
+
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  font-family: inherit;
+  @include font(16px, 700, 1.875);
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  background-color: var(--accent-color);
+  color: var(--light-theme-color);
+}

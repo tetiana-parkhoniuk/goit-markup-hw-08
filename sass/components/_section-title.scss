@@ -1,0 +1,6 @@
+.section__title {
+  margin-bottom: 50px;
+
+  @include font(36px, 700, 1.166);
+  text-align: center;
+}

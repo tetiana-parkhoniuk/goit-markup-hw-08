@@ -1,0 +1,10 @@
+@mixin font($fs, $fw, $lh) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+@mixin shape($width, $height) {
+  width: $width;
+  height: $height;
+}
