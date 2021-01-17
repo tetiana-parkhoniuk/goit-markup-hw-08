@@ -1,12 +1,8 @@
 .projects__nav {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
 }
 
-.projects__nav-item + .projects__nav-item {
-  margin-left: 8px;
-}
 .projects__nav-btn {
   border-radius: 4px;
   padding: 6px 22px;
@@ -31,25 +27,8 @@
   }
 }
 
-.projects__list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .projects__item {
-  margin-right: 30px;
-  margin-bottom: 30px;
-
   transition: box-shadow 250ms var(--timing-function);
-
-  &:nth-child(3n) {
-    margin-right: 0;
-  }
-
-  &:nth-last-child(-n + 3) {
-    margin-bottom: 0;
-  }
-
   &:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -67,7 +46,8 @@
 
 .projects__text-container {
   display: inline-block;
-  min-width: 370px;
+  width: 100%;
+  max-width: 450px;
   border: 1px solid #eeeeee;
   border-top: transparent;
   padding: 20px 24px;
@@ -127,8 +107,12 @@
   top: 0;
   left: 0;
   transform: translateY(100%);
-  padding: 63px 24px;
+  padding: 77px 24px;
   z-index: 100;
+
+  @media screen and (min-width: 1200px) {
+    padding: 63px 24px;
+  }
 
   @include shape(100%, 100%);
 
@@ -151,3 +135,54 @@
     transform: translateY(0);
   }
 }
+
+@media screen and (max-width: 767px) {
+  .projects__nav-item {
+    margin-right: 8px;
+
+    &:nth-child(-n + 2) {
+      margin-bottom: 15px;
+    }
+  }
+
+  .projects__nav {
+    margin-bottom: 40px;
+  }
+  .projects__item {
+    margin-bottom: 30px;
+  }
+}
+
+// .projects__nav {
+//   display: flex;
+//   justify-content: center;
+//   margin-bottom: 50px;
+// }
+
+// .projects__nav-item + .projects__nav-item {
+//   margin-left: 8px;
+// }
+
+// PROJECTS END //
+
+// .projects__list {
+//   display: flex;
+//   flex-wrap: wrap;
+// }
+
+// .projects__item {
+//   margin-right: 30px;
+//   margin-bottom: 30px;
+
+//   &:nth-child(3n) {
+//     margin-right: 0;
+//   }
+
+//   &:nth-last-child(-n + 3) {
+//     margin-bottom: 0;
+//   }
+// }
+
+// .projects__text-container {
+//   min-width: 370px;
+// }

@@ -17,46 +17,53 @@
 
 <body>
 
+    <!-- Header -->
     <header class="page-header">
         <div class="main-nav container">
-            <!--Navigation area-->
             <a class="logo" href="./index.html" aria-label="логотип сайта" lang="en">
                 <span class="logo__accent">Web</span>Studio
             </a>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a class="nav__link" href="./index.html">Студия</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link current" href="./portfolio.html">Портфолио</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
-            <!--Contacts area-->
-            <address class="contact-info">
-                <ul class="contact-info__list">
-                    <li class="contact-info__item">
-                        <a class="contact-info__link" href="mailto:info@devstudio.com">
-                            <svg class="contact-info__icon" width="16px" height="12px">
-                                <use href="./images/sprite.svg#envelope"></use>
-                            </svg>
-                            <span>info@devstudio.com</span>
-                        </a>
-                    </li>
-                    <li class="contact-info__item">
-                        <a class="contact-info__link" href="tel:+380961111111">
-                            <svg class="contact-info__icon" width="10px" height="16px">
-                                <use href="./images/sprite.svg#smartphone"></use>
-                            </svg>
-                            <span>+38 096 111 11 11</span>
-                        </a>
-                    </li>
-                </ul>
-            </address>
+            <button type="button" class="menu-btn" aria-expanded="false" aria-controls="menu" data-menu-button>
+                <svg class="menu-btn__icon" width="40px" height="40px" aria-label="Переключатель мобильного меню">
+                    <use class="icon__menu" href="./images/sprite.svg#menu"></use>
+                    <use class="icon__menu-close" href="./images/sprite.svg#menu-close"></use>
+                </svg>
+            </button>
+            <div class="menu" id="menu" data-menu>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a class="nav__link current" href="./index.html">Студия</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="./portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <address class="contact-info">
+                    <ul class="contact-info__list">
+                        <li class="contact-info__item">
+                            <a class="contact-info__link" href="mailto:info@devstudio.com">
+                                <svg class="contact-info__icon" width="16px" height="12px">
+                                    <use href="./images/sprite.svg#envelope"></use>
+                                </svg>
+                                <span>info@devstudio.com</span>
+                            </a>
+                        </li>
+                        <li class="contact-info__item">
+                            <a class="contact-info__link" href="tel:+380961111111">
+                                <svg class="contact-info__icon" width="10px" height="16px">
+                                    <use href="./images/sprite.svg#smartphone"></use>
+                                </svg>
+                                <span>+38 096 111 11 11</span>
+                            </a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
         </div>
     </header>
 
@@ -321,5 +328,6 @@
         </div>
     </footer>
     
+    <script src="./menu.js"></script>
 </body>
 </html>
