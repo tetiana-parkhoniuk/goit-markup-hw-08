@@ -1,35 +1,72 @@
 .page-header {
+  position: relative;
   border-bottom: 1px solid #ececec;
 }
 
 .main-nav {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-.nav__list {
-  display: flex;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
+.menu-btn {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  fill: var(--primary-text-color);
+
+  & .icon__menu-close {
+    display: none;
+  }
+
+  &.is-open .icon__menu-close {
+    display: block;
+  }
+
+  &.is-open .icon__menu-close {
+    display: block;
+  }
+
+  &.is-open .icon__menu {
+    display: none;
+  }
 }
 
-.nav__item + .nav__item {
-  margin-left: 50px;
+.menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  background: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+  text-align: center;
+}
+
+.nav {
+  padding: 60px 0;
 }
 
 .nav__link {
   position: relative;
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  display: inline-block;
+  font-size: 18px;
   font-weight: 500;
-  line-height: 1.142;
+  line-height: 1.166;
   letter-spacing: 0.02em;
 
   color: var(--primary-text-color);
 
   transition: color 250ms var(--timing-function);
+
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
 
   &:hover,
   &:focus {
@@ -42,7 +79,7 @@
     &:after {
       content: "";
       position: absolute;
-      bottom: -1px;
+      bottom: -8px;
       left: 0;
 
       @include shape(100%, 4px);
@@ -53,30 +90,25 @@
   }
 }
 
+.nav__item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
 .contact-info {
-  margin-left: auto;
+  margin-bottom: 60px;
 }
 
-.contact-info__list {
-  display: flex;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-
-.contact-info__item + .contact-info__item {
-  margin-left: 50px;
+.contact-info__item {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
 }
 
 .contact-info__link {
-  display: flex;
-  align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
   font-family: inherit;
+  font-size: 18px;
   font-weight: 500;
-  line-height: 1.142;
+  line-height: 1.166;
   letter-spacing: 0.02em;
 
   color: var(--secondary-text-color);
@@ -94,3 +126,96 @@
   margin-right: 10px;
   fill: currentColor;
 }
+
+// .main-nav {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .nav__list {
+//   display: flex;
+//   margin-top: 0;
+//   margin-bottom: 0;
+//   padding-left: 0;
+// }
+
+// .nav__item + .nav__item {
+//   margin-left: 50px;
+// }
+
+// .nav__link {
+//   position: relative;
+//   display: block;
+//   padding-top: 32px;
+//   padding-bottom: 32px;
+//   font-weight: 500;
+//   line-height: 1.142;
+//   letter-spacing: 0.02em;
+
+//   color: var(--primary-text-color);
+
+//   transition: color 250ms var(--timing-function);
+
+//   &:hover,
+//   &:focus {
+//     color: var(--accent-color);
+//     scroll-behavior: smooth;
+//   }
+
+//   &.current {
+//     color: var(--accent-color);
+//     &:after {
+//       content: "";
+//       position: absolute;
+//       bottom: -1px;
+//       left: 0;
+
+//       @include shape(100%, 4px);
+//       border-radius: 2px;
+
+//       background-color: var(--accent-color);
+//     }
+//   }
+// }
+
+// .contact-info {
+//   margin-left: auto;
+// }
+
+// .contact-info__list {
+//   display: flex;
+//   margin-top: 0;
+//   margin-bottom: 0;
+//   padding-left: 0;
+// }
+
+// .contact-info__item + .contact-info__item {
+//   margin-left: 50px;
+// }
+
+// .contact-info__link {
+//   display: flex;
+//   align-items: center;
+//   padding-top: 32px;
+//   padding-bottom: 32px;
+
+//   font-family: inherit;
+//   font-weight: 500;
+//   line-height: 1.142;
+//   letter-spacing: 0.02em;
+
+//   color: var(--secondary-text-color);
+
+//   transition: color 250ms var(--timing-function);
+
+//   &:hover,
+//   &:focus {
+//     color: var(--accent-color);
+//     scroll-behavior: smooth;
+//   }
+// }
+
+// .contact-info__icon {
+//   margin-right: 10px;
+//   fill: currentColor;
+// }

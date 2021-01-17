@@ -1,10 +1,8 @@
 .logo {
-  padding-top: 24px;
-  padding-bottom: 25px;
-  margin-right: 93px;
-
+  padding-top: 16px;
+  padding-bottom: 16px;
   font-family: var(--secondary-font);
-  @include font(26px, 700, 1.192);
+  @include font(24px, 700, 1.166);
   text-decoration: none;
 
   color: var(--dark-logo-text-color);
@@ -15,5 +13,21 @@
 
   &__dark-theme {
     color: var(--light-theme-color);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+    @include font(26px, 700, 1.192);
   }
 }
