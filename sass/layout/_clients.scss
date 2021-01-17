@@ -1,6 +1,8 @@
 .clients__list {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .clients__link {
@@ -8,7 +10,7 @@
   // display: flex;
   // justify-content: center;
   // align-items: center;
-  @include shape(170px, 90px);
+  @include shape(210px, 90px);
   border: 1px solid var(--socials-icon-light-color);
   border-radius: 4px;
 
@@ -20,12 +22,6 @@
   }
 }
 
-.clients__item {
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
-}
-
 .clients__icon {
   fill: var(--socials-icon-light-color);
 
@@ -34,5 +30,56 @@
   .clients__link:hover &,
   .clients__link:focus & {
     fill: var(--accent-color);
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .clients__link {
+    @include shape(140px, 90px);
+  }
+  .clients__item {
+    &:nth-child(2n + 1) {
+      margin-right: 15px;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .clients__item {
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+
+    &:nth-child(-n + 4) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .clients__link {
+    @include shape(226px, 90px);
+  }
+  .clients__item {
+    margin-right: 30px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(-n + 3) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__link {
+    @include shape(170px, 90px);
+  }
+  .clients__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
