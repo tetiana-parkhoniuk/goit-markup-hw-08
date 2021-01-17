@@ -24,7 +24,7 @@
             <a class="logo" href="./index.html" aria-label="логотип сайта" lang="en">
                 <span class="logo__accent">Web</span>Studio
             </a>
-            <button type="button" class="menu-btn" aria-expanded="false"
+            <button type="button" class="menu-btn" aria-expanded="false" aria-controls="menu"
                 data-menu-button>
                 <svg class="menu-btn__icon" width="40px" height="40px"
                 aria-label="Переключатель мобильного меню">
@@ -32,7 +32,7 @@
                     <use class="icon__menu-close" href="./images/sprite.svg#menu-close"></use>
                 </svg>
             </button>
-            <div class="menu">
+            <div class="menu" id="menu" data-menu>
                 <nav class="nav">
                     <ul class="nav__list">
                         <li class="nav__item">
