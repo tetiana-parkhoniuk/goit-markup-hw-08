@@ -73,6 +73,13 @@
   }
 }
 
+@media screen and (min-width: 994px) and (max-width: 1199px) {
+  .clients__item {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .clients__link {
     @include shape(170px, 90px);
