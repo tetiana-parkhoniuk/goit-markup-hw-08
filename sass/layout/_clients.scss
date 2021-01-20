@@ -76,7 +76,22 @@
 @media screen and (min-width: 994px) and (max-width: 1199px) {
   .clients__item {
     width: 100%;
-    max-width: 300px;
+    max-width: 320px;
+  }
+}
+
+@media screen and (min-width: 690px) and (max-width: 767px) {
+  .clients__link {
+    @include shape(300px, 90px);
+  }
+  .clients__item {
+    &:nth-child(2n + 1) {
+      margin-right: 40px;
+    }
+
+    &:nth-child(-n + 4) {
+      margin-bottom: 30px;
+    }
   }
 }
 
